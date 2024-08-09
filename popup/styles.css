@@ -1,0 +1,118 @@
+/* General Layout */
+/* styles.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: white;
+  width: 320px;
+  height: 240px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #08b0f7;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(8, 176, 247, 0.3);
+}
+
+p#tabTitle {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.slider-container {
+  width: 100%;
+  position: relative;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
+input[type=range] {
+  width: 100%;
+  cursor: pointer;
+  background: #333;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background: #08b0f7;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 0 3px rgba(8, 176, 247, 0.3);
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  background: #00a1e1;
+  box-shadow: 0 0 0 5px rgba(8, 176, 247, 0.5);
+}
+
+#volumeLabel {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #08b0f7;
+  font-weight: bold;
+  background-color: rgba(26, 26, 26, 0.8);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 12px;
+  color: #ccc;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+}
+
+/* Hover effects */
+input[type=range]:hover {
+  background: #444;
+}
+
+h1:hover {
+  color: #00a1e1;
+}
